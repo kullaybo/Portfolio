@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio Website">
+    <title>Personal Portfolio</title>
+    <style>
+        /* General Styles */
+        :root {
+            --background-color: #ffffff;
+            --text-color: #333333;
+            --header-background: #0077b5;
+            --header-text-color: #ffffff;
+            --nav-background: #005582;
+            --nav-hover-background: #004065;
+            --footer-background: #333333;
+            --footer-text-color: #ffffff;
+        }
+
+        [data-theme="dark"] {
+            --background-color: #121212;
+            --text-color: #e0e0e0;
+            --header-background: #333333;
+            --header-text-color: #ffffff;
+            --nav-background: #444444;
+            --nav-hover-background: #555555;
+            --footer-background: #222222;
+            --footer-text-color: #e0e0e0;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: var(--header-background);
+            color: var(--header-text-color);
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            margin: 0;
+            background: var(--nav-background);
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            padding: 0.8em 1.5em;
+            text-decoration: none;
+            color: var(--header-text-color);
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background: var(--nav-hover-background);
+        }
+
+        section {
+            padding: 2em 0;
+        }
+
+        #about {
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2em;
+        }
+
+        #about div {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+
+        #about a {
+            color: #0077b5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #about a:hover {
+            color: #005582;
+        }
+
+        footer {
+            background-color: var(--footer-background);
+            color: var(--footer-text-color);
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        footer a {
+            color: #0077b5;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #005582;
+        }
+
+        #theme-switch {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: var(--header-background);
+            color: var(--header-text-color);
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Emanuel Karabo Serake</h1>
+        <p>Showcasing My Skills, Projects, and Experience</p>
+    </header>
+    <button id="theme-switch">Toggle Dark Mode</button>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <div>
+            <p>
+                Passionate about technology and entrepreneurship, I am dedicated to delivering innovative solutions and empowering others to reach their full potential. With expertise in computer science and finance, I have successfully worked on tech-driven projects, developed business strategies, and was part of high-performing teams to drive growth and make informed decisions.
+            </p>
+            <p>
+                Beyond entrepreneurship, I find fulfillment in mentoring individuals on their personal and professional journeys, helping them overcome challenges and achieve their goals. I thrive on collaboration, fostering inclusive environments, and driving creative solutions through diverse perspectives.
+            </p>
+            <p>
+                Let’s connect to explore transformative projects, investment opportunities, or personal and professional growth. Together, we can create impactful change and achieve remarkable outcomes.
+            </p>
+            <p>
+                <a href="https://www.linkedin.com/in/karaboserake/" target="_blank">
+                    Connect with Me on LinkedIn
+                </a>
+            </p>
+        </div>
+    </section>
+    <section id="projects">
+        <h2 style="text-align: center;">My Projects</h2>
+        <p style="text-align: center;">Data Migration</p>
+        <p style="text-align: center;">Global Terrorism Dashboard</p>
+    </section>
+    <section id="contact">
+        <h2 style="text-align: center;">Contact Me</h2>
+        <p style="text-align: center;">Email: karaboemanuelmokhethi@gmail.com</p>
+        <p style="text-align: center;">Phone: +27 62-471-2266</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Emanuel S. All rights reserved. <a href="https://www.linkedin.com/in/karaboserake/" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <script>
+        const themeSwitch = document.getElementById('theme-switch');
+        const body = document.body;
+
+        themeSwitch.addEventListener('click', () => {
+            if (body.dataset.theme === 'dark') {
+                body.dataset.theme = '';
+                themeSwitch.textContent = 'Toggle Dark Mode';
+            } else {
+                body.dataset.theme = 'dark';
+                themeSwitch.textContent = 'Toggle Light Mode';
+            }
+        });
+    </script>
+</body>
+</html>
